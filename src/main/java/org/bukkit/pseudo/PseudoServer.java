@@ -44,7 +44,7 @@ import org.bukkit.command.CommandMap;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.command.PluginCommand;
-import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemFactory;
+import org.bukkit.craftbukkit.v1_17_R1.inventory.CraftItemFactory;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
@@ -189,6 +189,16 @@ public class PseudoServer implements Server {
 
 	@Override
 	public void setWhitelist(final boolean b) {
+		throw new NotImplementedException();
+	}
+
+	@Override
+	public boolean isWhitelistEnforced() {
+		throw new NotImplementedException();
+	}
+
+	@Override
+	public void setWhitelistEnforced(boolean bl) {
 		throw new NotImplementedException();
 	}
 
@@ -402,6 +412,16 @@ public class PseudoServer implements Server {
 	@Override
 	public Recipe getRecipe(@NotNull final NamespacedKey namespacedKey) {
 		throw new NotImplementedException();
+	}
+
+	@Override
+	public @Nullable Recipe getCraftingRecipe(@NotNull ItemStack[] itemStacks, @NotNull World world) {
+		return null;
+	}
+
+	@Override
+	public @NotNull ItemStack craftItem(@NotNull ItemStack[] itemStacks, @NotNull World world, @NotNull Player player) {
+		return null;
 	}
 
 	@NotNull
